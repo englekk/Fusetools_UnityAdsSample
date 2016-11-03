@@ -1,0 +1,14 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+  	"Fuse",
+    "Fuse.BasicTheme",
+  	"FuseJS"
+  ],
+  "Includes": [
+    "*",
+    "*.h:ObjCHeader:iOS",
+    "*.m:ObjCSource:iOS",
+    "*.uxl"
+  ]
+}

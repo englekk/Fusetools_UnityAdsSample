@@ -1,0 +1,55 @@
+<!--[[
+    작성자: 원강민
+    블로그: https://blog.wonhada.com
+    퓨즈 커뮤니티: https://www.facebook.com/groups/fusetools/
+]]-->
+
+<App Background="#CCC">
+	<UnoPlayground ux:Global="UnoPlayground"/>
+	
+	<StackPanel Alignment="Center" ItemSpacing="10">
+		<JavaScript>
+			var Environment = require('FuseJS/Environment');
+			var readyBtnVisible = Environment.mobile == true ? "Visible" : "Hidden";
+
+			var UnoPlayground = require("UnoPlayground");
+			UnoPlayground.initAds();
+			
+			var Observable = require("FuseJS/Observable");
+			var _isReady = Observable(false);
+
+			function isReady()
+			{
+				_isReady.value = UnoPlayground.isReady();
+			}
+
+			var getIsReady = Observable(function ()
+			{
+				if(readyBtnVisible == "Hidden") return "This sample is for mobile.";
+				return "IsReady: " + (_isReady.value == false ? "Tap after 1 second again" : "Ready!");
+			});
+
+			function showAds()
+			{
+				UnoPlayground.showAds();
+			}
+
+			var showAdsBtnVisibleStatus = Observable(function ()
+			{
+				return _isReady.value == true ? "Visible" : "Hidden";
+			});
+
+			module.exports = {
+				_isReady,
+				getIsReady,
+				showAds,
+				isReady,
+				readyBtnVisible,
+				showAdsBtnVisibleStatus
+			}
+		</JavaScript>
+		<Text Value="{getIsReady}" TextAlignment="Center" />
+		<Basic.Button Text="isReady?" Clicked="{isReady}" Visibility="{readyBtnVisible}" />
+		<Basic.Button Text="showAds" Clicked="{showAds}" Visibility="{showAdsBtnVisibleStatus}" />
+	</StackPanel>
+</App>
