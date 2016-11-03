@@ -1,3 +1,0 @@
-<Extensions Backend="CPlusPlus" Condition="Android">
-    <CopyFile Name="@('android_libs/unity-ads.aar':Path)" TargetName="@(Java.LibsDirectory)/unity-ads.aar" />
-</Extensions>
