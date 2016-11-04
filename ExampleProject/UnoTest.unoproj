@@ -6,10 +6,9 @@
   	"FuseJS"
   ],
   "Includes": [
-    "*",
-    "*.h:ObjCHeader:iOS",
-    "*.m:ObjCSource:iOS",
-    "*.java:Java:Android",
-    "*.uxl"
+    "*"
+  ],
+  "Projects": [
+    "../UnityAds/UnityAds.unoproj"
   ]
 }

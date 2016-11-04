@@ -1,3 +1,10 @@
+//
+//  Author: Kangmin Won
+//  Blog: https://blog.wonhada.com
+//  Fuse Community: https://www.facebook.com/groups/fusetools/
+//  License: MIT
+//
+
 package com.foreign;
 
 import com.unity3d.ads.IUnityAdsListener;

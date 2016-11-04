@@ -1,0 +1,15 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+  	"Fuse",
+  	"FuseJS"
+  ],
+  "Includes": [
+    "*",
+    "*.uno",
+    "*.h:ObjCHeader:iOS",
+    "*.m:ObjCSource:iOS",
+    "*.java:Java:Android",
+    "*.uxl"
+  ]
+}

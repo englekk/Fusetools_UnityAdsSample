@@ -1,3 +1,10 @@
+//
+//  Author: Kangmin Won
+//  Blog: https://blog.wonhada.com
+//  Fuse Community: https://www.facebook.com/groups/fusetools/
+//  License: MIT
+//
+
 using Fuse;
 using Fuse.Scripting;
 using Fuse.Reactive;
@@ -88,7 +95,7 @@ public class UnoPlayground : NativeModule
     [Foreign(Language.Java)]
     static extern(Android) void showAds()
     @{
-        /* 액티비티 실행 방법
+        /* How to use intent
         Context _main = Activity.getRootActivity();// (= android.app.Activity _main)
         Intent intent = new Intent(_main, UnityAdsAndroidListener.class);
         //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

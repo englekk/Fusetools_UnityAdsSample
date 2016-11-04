@@ -1,9 +1,8 @@
 //
-//  UnityAdsManager.m
-//  https://blog.WonHada.com
-//
-//  Created by Won Kangmin on 2016. 5. 23..
-//  Copyright © 2016년 Bryan Smith. All rights reserved.
+//  Author: Kangmin Won
+//  Blog: https://blog.wonhada.com
+//  Fuse Community: https://www.facebook.com/groups/fusetools/
+//  License: MIT
 //
 
 #import "UnityAdsManager.h"

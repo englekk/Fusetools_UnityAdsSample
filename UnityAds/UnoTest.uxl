@@ -1,3 +1,10 @@
+<!--[[
+	Author: Kangmin Won
+	Blog: https://blog.wonhada.com
+	Fuse Community: https://www.facebook.com/groups/fusetools/
+	License: MIT
+]]-->
+
 <Extensions Backend="CPlusPlus" Condition="Android">
     <CopyFile Name="@('android_libs/classes.jar':Path)" TargetName="@(Java.LibsDirectory)/classes.jar" />
 
