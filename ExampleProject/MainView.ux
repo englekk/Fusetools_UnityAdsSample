@@ -6,37 +6,32 @@
 ]]-->
 
 <App Background="#CCC">
-	<UnoPlayground ux:Global="UnoPlayground"/>
-	
 	<StackPanel Alignment="Center" ItemSpacing="10">
 		<JavaScript>
 			var Environment = require('FuseJS/Environment');
+			
 			var readyBtnVisible = Environment.mobile == true ? "Visible" : "Hidden";
-
-			var UnoPlayground = require("UnoPlayground");
+			
+			var UnoPlayground = require('UnoPlayground');
 			UnoPlayground.initAds();
 			
 			var Observable = require("FuseJS/Observable");
 			var _isReady = Observable(false);
 
-			function isReady()
-			{
+			function isReady() {
 				_isReady.value = UnoPlayground.isReady();
 			}
 
-			var getIsReady = Observable(function ()
-			{
+			var getIsReady = Observable(function () {
 				if(readyBtnVisible == "Hidden") return "This sample is for mobile.";
 				return "IsReady: " + (_isReady.value == false ? "Tap after 1 second again" : "Ready!");
 			});
 
-			function showAds()
-			{
+			function showAds() {
 				UnoPlayground.showAds();
 			}
 
-			var showAdsBtnVisibleStatus = Observable(function ()
-			{
+			var showAdsBtnVisibleStatus = Observable(function () {
 				return _isReady.value == true ? "Visible" : "Hidden";
 			});
 
